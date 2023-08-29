@@ -1,5 +1,4 @@
 
-
 export default async function ListUsers({users}) {
    await new Promise((resolve) => setTimeout(resolve, 5000));
     return (
@@ -8,7 +7,10 @@ export default async function ListUsers({users}) {
                 <p key={index}>
                     {user.name}
                 </p>
+
             )}
+            <button>Alterar</button>
+            <button>Registrar</button>
     </div>
     );
 };
