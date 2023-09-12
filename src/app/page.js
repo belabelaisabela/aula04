@@ -4,7 +4,7 @@ import handlerAcessUser from "./functions/handlerAcess"
 import { useRouter } from "next/navigation";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import styles from './page.module.css'
 
 export default function Login() {
   const [user, setUser] = useState({

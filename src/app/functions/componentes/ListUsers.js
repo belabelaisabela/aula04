@@ -9,8 +9,6 @@ export default async function ListUsers({users}) {
                 </p>
 
             )}
-            <button>Alterar</button>
-            <button>Registrar</button>
     </div>
     );
 };
