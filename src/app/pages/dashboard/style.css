@@ -14,7 +14,9 @@
     list-style: none;
     padding: 0;
 }
-
+h1 {
+    color:blueviolet;
+}
 #menu-h ul li {
     display: inline;
 }
