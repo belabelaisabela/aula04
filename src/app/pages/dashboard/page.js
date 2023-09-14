@@ -11,9 +11,9 @@ export default async function Dashboard() {
     <div>
     <nav id="menu-h">
         <ul>
-            <li><Link href={"/pages/dashboard"}>Homee</Link></li>
+            <li><Link href={"/pages/dashboard"}>Home</Link></li>
             <li><Link href={"/pages/register"}>Register</Link></li>
-            <li><Link href={"/pages/alter"}>Alterar</Link></li>
+            <li><Link href={"/pages/alter"}>Alter</Link></li>
         </ul>
     </nav>
             <Suspense fallback={<p>Carregando...</p>}>
