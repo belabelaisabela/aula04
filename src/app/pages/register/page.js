@@ -25,12 +25,12 @@ function Register() {
       <form>
       <h3>REGISTRAR</h3>
       <hr></hr>
-        <p for="name">Name:</p>
+        <p>Name:</p>
         <input className="inpu"
           placeholder='Name'
           type='name'>
         </input><br/>
-        <p for="email">E-mail:</p>
+        <p>E-mail:</p>
         <input className="inpu"
           placeholder='E-mail'
           type='email'>

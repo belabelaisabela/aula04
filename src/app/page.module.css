@@ -1,3 +1,4 @@
+
 .inpu:focus {
     border: 3px solid #555;
   }
@@ -29,6 +30,6 @@
   
 .formlogin {
     border-radius: 5px;
-    background-color: #2c0505;
+    background-color: #312d2d;
     padding: 20px;
   }

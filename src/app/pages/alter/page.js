@@ -1,12 +1,16 @@
-import { getUsers } from "@/app/functions/handlerAcessAPI";
+'use client'
 import { Suspense } from "react";
 import 'react-toastify/dist/ReactToastify.min.css';
 import Link from "next/link";
-import styles from './style3.css';
+import { ToastContainer, toast } from 'react-toastify';
+import styles from './style3.css'
 
 
-export default async function Alter() {
+function Alter() {
+    const notify =() => toast.success("Usuário Alterado com sucesso!");
+ 
     return (
+    <body>
     <div>
     <nav id="menu-h">
         <ul>
@@ -15,7 +19,35 @@ export default async function Alter() {
             <li><Link href={"/pages/alter"}>Alter</Link></li>
         </ul>
     </nav>
-       Alterar
+    <div className="box-formulario">
+    <div className="alter">
+       
+      <form>
+      <h3>ALTERAR</h3>
+      <hr></hr>
+        <p>Name:</p>
+        <input className="inpu"
+          placeholder='Name'
+          type='name'>
+        </input><br/>
+        <p>E-mail:</p>
+        <input className="inpu"
+          placeholder='E-mail'
+          type='email'>
+        </input><br/>
+        <p>Password:</p>
+        <input className="inpu"
+          placeholder='Password'
+          type='password'>
+        </input><br/>
+        <button className="botao rotacao" onClick={notify}>Alter</button>
+        <ToastContainer />
+      </form>
+      </div>
+    
     </div>
+    </div>
+    </body>
     );
 };
+export default Alter
