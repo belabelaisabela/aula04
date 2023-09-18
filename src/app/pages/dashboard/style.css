@@ -32,3 +32,15 @@ body{
 #menu-h ul li a:hover {
     background-color: #ffcb00;
 }
+.nomes {
+    color: white;
+    font-size: 20px;
+    background-color: rgb(37, 37, 39);
+    text-align: center;
+    width: 25%;
+    height: 40%;
+    border-radius: 15px;
+    margin-top: 60px;
+    border: 3px solid #ffcb00;
+}
+

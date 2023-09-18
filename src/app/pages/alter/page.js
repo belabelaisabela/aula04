@@ -1,12 +1,11 @@
 'use client'
-import { Suspense } from "react";
 import 'react-toastify/dist/ReactToastify.min.css';
 import Link from "next/link";
 import { ToastContainer, toast } from 'react-toastify';
 import styles from './style3.css'
 
 
-function Alter() {
+export default function Alter() {
     const notify =() => toast.success("Usuário Alterado com sucesso!");
  
     return (
@@ -29,25 +28,23 @@ function Alter() {
         <input className="inpu"
           placeholder='Name'
           type='name'>
-        </input><br/>
+        </input>
         <p>E-mail:</p>
         <input className="inpu"
           placeholder='E-mail'
           type='email'>
-        </input><br/>
+        </input>
         <p>Password:</p>
         <input className="inpu"
           placeholder='Password'
           type='password'>
-        </input><br/>
+        </input>
         <button className="botao rotacao" onClick={notify}>Alter</button>
-        <ToastContainer />
       </form>
+      <ToastContainer />
       </div>
-    
     </div>
     </div>
     </body>
     );
 };
-export default Alter

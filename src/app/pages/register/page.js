@@ -1,13 +1,12 @@
 'use client'
-import { Suspense } from "react";
 import 'react-toastify/dist/ReactToastify.min.css';
 import Link from "next/link";
 import { ToastContainer, toast } from 'react-toastify';
 import styles from './style2.css'
 
 
-function Register() {
-    const notify =() => toast.success("Usuário cadastrado com sucesso!");
+export default function Register() {
+    const notificacao =() => toast.error("Usuário cadastrado com sucesso!");
  
     return (
     <body>
@@ -22,27 +21,27 @@ function Register() {
     <div className="box-formulario">
     <div className="register">
        
-      <form>
+      <form >
       <h3>REGISTRAR</h3>
       <hr></hr>
         <p>Name:</p>
         <input className="inpu"
           placeholder='Name'
-          type='name'>
-        </input><br/>
+          type='text'>
+        </input>
         <p>E-mail:</p>
         <input className="inpu"
           placeholder='E-mail'
           type='email'>
-        </input><br/>
+        </input>
         <p>Password:</p>
         <input className="inpu"
           placeholder='Password'
-          type='password'>
-        </input><br/>
-        <button className="botao rotacao" onClick={notify}>Register</button>
-        <ToastContainer />
+          type='text'>
+        </input>
+        <button className="botao rotacao" onClick={notificacao}>Register</button>
       </form>
+      <ToastContainer />
       </div>
     
     </div>
@@ -50,4 +49,3 @@ function Register() {
     </body>
     );
 };
-export default Register

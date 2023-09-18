@@ -27,22 +27,32 @@ export default function Login() {
     }
   }
   return (
-    <div className="formlogin">
-      <h1>Login</h1>
+    <body className={styles.body}>
+    <div className={styles.boxformulario}>
+    <div className={styles.loginn}>
+
+      <h3 className={styles.h3}>LOGIN</h3>
+      <hr className={styles.hr}></hr>
+
       <form onSubmit={handlerLogin}>
-        <input className="inpu"
+        <p className={styles.p}>E-mail</p>
+        <input className={styles.inpu}
           placeholder='E-mail'
           type="email"
           onChange={(e) => { setUser({ ...user, email: e.target.value }) }}>
         </input>
-        <input className="inpu"
+        
+        <p className={styles.p}>Senha</p>
+        <input className={styles.inpu}
           placeholder='Senha'
           type='password'
           onChange={(e) => { setUser({ ...user, password: e.target.value }) }}>
         </input>
-        <button className="botao">Entrar</button>
+        <button className={styles.botao}>Entrar</button>
       </form>
       <ToastContainer />
     </div>
+    </div>
+    </body>
   )
 }

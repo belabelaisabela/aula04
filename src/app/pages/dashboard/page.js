@@ -16,9 +16,11 @@ export default async function Dashboard() {
             <li><Link href={"/pages/alter"}>Alter</Link></li>
         </ul>
     </nav>
-            <Suspense fallback={<p>Carregando...</p>}>
-                <ListUsers users={listaa}/>
-            </Suspense>  
+    <div className="nomes">
+            <Suspense  fallback={<p>Carregando...</p>}>
+                <ListUsers  users={listaa}/>
+            </Suspense> 
+            </div> 
     </div>
     );
 };
