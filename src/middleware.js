@@ -19,9 +19,19 @@ export const middleware = (request) => {
             return NextResponse.redirect(urlDashBoard);
         }
     }
+    if (!isTokenValidated || !token) {
+        if (request.nextUrl.pathname === '/pages/alter') {
+            return NextResponse.redirect(urlLogin);
+        }
+    }
+    if (!isTokenValidated || !token) {
+        if (request.nextUrl.pathname === '/pages/register') {
+            return NextResponse.redirect(urlLogin);
+        }
+    }
     NextResponse.next();
 };
 export const config = {
-    matcher: ['/', '/pages/dashboard']
+    matcher: ['/', '/pages/dashboard', '/pages/alter', '/pages/register']
 };
 
