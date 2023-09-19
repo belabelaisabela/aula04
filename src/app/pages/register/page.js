@@ -6,8 +6,12 @@ import styles from './style2.css'
 
 
 export default function Register() {
-    const notificacao =() => toast.error("Usuário cadastrado com sucesso!");
- 
+  
+  const notify = (e) => {
+    e.preventDefault();
+    toast.success('Usuário registrado com sucesso!')
+  }
+
     return (
     <body>
     <div>
@@ -21,7 +25,7 @@ export default function Register() {
     <div className="box-formulario">
     <div className="register">
        
-      <form >
+      <form onSubmit={notify}>
       <h3>REGISTRAR</h3>
       <hr></hr>
         <p>Name:</p>
@@ -39,7 +43,7 @@ export default function Register() {
           placeholder='Password'
           type='text'>
         </input>
-        <button className="botao rotacao" onClick={notificacao}>Register</button>
+        <button className="botao rotacao">Register</button>
       </form>
       <ToastContainer />
       </div>

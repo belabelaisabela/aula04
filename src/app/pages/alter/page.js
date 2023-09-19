@@ -6,7 +6,10 @@ import styles from './style3.css'
 
 
 export default function Alter() {
-    const notify =() => toast.success("Usuário Alterado com sucesso!");
+  const notify = (e) => {
+    e.preventDefault();
+    toast.success('Usuário alterado com sucesso!')
+  }
  
     return (
     <body>
@@ -21,7 +24,7 @@ export default function Alter() {
     <div className="box-formulario">
     <div className="alter">
        
-      <form>
+      <form onSubmit={notify}>
       <h3>ALTERAR</h3>
       <hr></hr>
         <p>Name:</p>
