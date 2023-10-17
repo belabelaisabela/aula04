@@ -1,8 +1,8 @@
 'use server'
 
-const listaa = "https://projetofinalmarcelino.vercel.app"/
+const listaa = "https://projetofinalmarcelino.vercel.app"
 
-const getUserAuthenticated = (userLogin) => {
+const getUserAuthenticated = async (user) => {
     const responseOfApi = await fetch(url + "/user/authenticated",
         {
             method:"POST",
@@ -11,7 +11,7 @@ const getUserAuthenticated = (userLogin) => {
         }
     );
     const userAuth = await responseOfApi.json();
-    return userAuth
+    return userAuth;
 }
 
 const getUsers = () =>{
