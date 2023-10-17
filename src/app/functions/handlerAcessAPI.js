@@ -1,44 +1,20 @@
 'use server'
 
-const listaa = [
-    {
-        name: "Isabela",
-        email: "isabela@gmail.com",
-        password: "123",
-        token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
-    },
-    {
-        name: "Joao",
-        email: "joao.santos@gmail.com",
-        password: "123",
-        token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
-    },
-    {
-        name: "Gabriel",
-        email: "gabriel@gmail.com",
-        password: "12345",
-        token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
-    },
-    {
-        name: "Iza",
-        email: "iza@gmail.com",
-        password: "123456",
-        token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
-    }
-]
+const listaa = "https://projetofinalmarcelino.vercel.app"/
 
 const getUserAuthenticated = (userLogin) => {
-    let usermach = [];
-
-    listaa.map((user) => {
-        if(user.email === userLogin.email && user.password === userLogin.password){
-            usermach = user
+    const responseOfApi = await fetch(url + "/user/authenticated",
+        {
+            method:"POST",
+            headers:{ "Content-type":"Application/json" },
+            body: JSON.stringify(user)
         }
-    })
-    return usermach
+    );
+    const userAuth = await responseOfApi.json();
+    return userAuth
 }
 
 const getUsers = () =>{
-        return listaa
+        
 }
 export { getUsers, getUserAuthenticated };
