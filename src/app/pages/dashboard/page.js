@@ -6,7 +6,7 @@ import Link from "next/link";
 import styles from './style.css'
 
 export default async function Dashboard() {
-   const listaa = await getUsers()
+   const users = await getUsers()
     return (
     <div>
     <nav id="menu-h">
@@ -18,7 +18,7 @@ export default async function Dashboard() {
     </nav>
     <div className="nomes">
             <Suspense  fallback={<p>Carregando...</p>}>
-                <ListUsers  users={listaa}/>
+                <ListUsers  users={users}/>
             </Suspense> 
             </div> 
     </div>
